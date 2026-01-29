@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiDDiAI - Beyond the Dialysis Room | NutriThera AI LLC</title>
+    <meta name="description" content="Advanced AI-driven dietary management for Chronic Kidney Disease by NutriThera AI LLC. Manage renal health with Gemini-powered insights.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Custom Font Imports (Google Fonts) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 500px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        .mobile-screen {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 8px solid #1c1917;
+            border-radius: 2rem;
+            overflow: hidden;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo-glow {
+            filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.2));
+        }
+
+        /* AI Loading Animation */
+        .shimmer {
+            background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Fallback Logo Style */
+        .logo-fallback {
+            background-color: #f0fdf4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #059669;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-stone-50/95 backdrop-blur border-b border-stone-200">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-full border border-stone-100 flex items-center justify-center bg-white">
+                    <img src="KiDDiAI.webp" alt="KiDDiAI Logo" class="h-full w-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-emerald-600 text-xs font-bold\'>KAI</span>'">
+                </div>
+                <span class="text-2xl font-bold text-emerald-700 tracking-tight serif">KiDDiAI</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-stone-600">
+                <a href="#mission" class="hover:text-emerald-700 transition">Mission</a>
+                <a href="#ai-lab" class="hover:text-emerald-700 transition text-emerald-600">AI Wellness Lab ✨</a>
+                <a href="#product" class="hover:text-emerald-700 transition">The App</a>
+                <a href="#science" class="hover:text-emerald-700 transition">Science</a>
+            </div>
+            <button onclick="scrollToSection('contact')" class="bg-stone-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-emerald-700 transition shadow-lg">
+                Get the App
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-16 pb-24 overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="mx-auto mb-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-white p-2 shadow-xl border border-stone-100 flex items-center justify-center overflow-hidden logo-glow">
+                <img src="KiDDiAI.webp" alt="KiDDiAI Logo" class="h-full w-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-emerald-600 text-4xl\'>&#9877;</div>'">
+            </div>
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+                Nephrology + Gemini AI
+            </div>
+            <h1 class="text-4xl md:text-7xl font-bold text-stone-900 mb-6 leading-tight max-w-4xl mx-auto">
+                Your Path Beyond the <span class="text-emerald-700 italic">Dialysis Room</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-stone-600 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Advanced AI-driven dietary management for Chronic Kidney Disease. Created by specialists at NutriThera AI LLC.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://apps.apple.com/app/kiddiai/id6755172184" target="_blank" class="px-6 py-3 bg-stone-900 text-white rounded-lg font-semibold shadow-xl hover:bg-stone-800 transition transform hover:-translate-y-1 flex items-center gap-2">
+                    <span class="text-xl">&#63743;</span> App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.nutri_thera.KiddiAI" target="_blank" class="px-6 py-3 bg-emerald-700 text-white rounded-lg font-semibold shadow-xl hover:bg-emerald-800 transition transform hover:-translate-y-1 flex items-center gap-2">
+                    <span class="text-xl">&#9654;</span> Google Play
+                </a>
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-30">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div class="absolute bottom-10 right-10 w-64 h-64 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        </div>
+    </header>
+
+    <!-- AI WELLNESS LAB -->
+    <section id="ai-lab" class="py-24 bg-stone-100 border-y border-stone-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-stone-900 mb-4 serif">KiDDiAI Wellness Lab ✨</h2>
+                <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+                    Harness the power of <strong>Gemini AI</strong> to manage your renal health with expert-level insights in seconds.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Meal Analyzer -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 flex flex-col">
+                    <div class="mb-6 h-12 w-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-2xl">
+                        &#127828;
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">Meal Impact Analyzer ✨</h3>
+                    <p class="text-sm text-stone-500 mb-6">Describe your meal to see if it fits your renal profile.</p>
+                    <textarea id="meal-input" placeholder="e.g., Grilled salmon with brown rice and steamed broccoli..." class="w-full h-32 p-4 rounded-xl border border-stone-200 bg-stone-50 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none transition mb-4"></textarea>
+                    <button onclick="analyzeMeal()" id="btn-analyze-meal" class="mt-auto w-full py-3 bg-emerald-600 text-white rounded-xl font-bold hover:bg-emerald-700 transition flex items-center justify-center gap-2">
+                        Analyze Meal ✨
+                    </button>
+                </div>
+
+                <!-- Lab Translator -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 flex flex-col">
+                    <div class="mb-6 h-12 w-12 bg-sky-100 text-sky-700 rounded-full flex items-center justify-center text-2xl">
+                        &#128104;&#8205;&#9877;&#65039;
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">Lab Result Translator ✨</h3>
+                    <p class="text-sm text-stone-500 mb-6">Paste your lab numbers (GFR, Creatinine) to understand them.</p>
+                    <textarea id="lab-input" placeholder="e.g., GFR is 45, Creatinine is 1.8, Potassium is 5.2..." class="w-full h-32 p-4 rounded-xl border border-stone-200 bg-stone-50 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none transition mb-4"></textarea>
+                    <button onclick="translateLab()" id="btn-translate-lab" class="mt-auto w-full py-3 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 transition flex items-center justify-center gap-2">
+                        Translate Labs ✨
+                    </button>
+                </div>
+
+                <!-- Recipe Generator -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 flex flex-col">
+                    <div class="mb-6 h-12 w-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-2xl">
+                        &#129372;
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-stone-900">Renal Recipe Chef ✨</h3>
+                    <p class="text-sm text-stone-500 mb-6">Enter available ingredients for a kidney-safe recipe.</p>
+                    <textarea id="recipe-input" placeholder="e.g., Chicken breast, zucchini, olive oil..." class="w-full h-32 p-4 rounded-xl border border-stone-200 bg-stone-50 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none transition mb-4"></textarea>
+                    <button onclick="generateRecipe()" id="btn-generate-recipe" class="mt-auto w-full py-3 bg-amber-600 text-white rounded-xl font-bold hover:bg-amber-700 transition flex items-center justify-center gap-2">
+                        Get Recipe ✨
+                    </button>
+                </div>
+            </div>
+
+            <!-- AI Result Area -->
+            <div id="ai-result-container" class="hidden mt-12 fade-in">
+                <div class="bg-stone-900 text-white p-8 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div id="ai-result-icon" class="h-10 w-10 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-xl">✨</div>
+                                <h3 id="ai-result-title" class="text-2xl font-bold serif">AI Wellness Report</h3>
+                            </div>
+                            <button onclick="closeAiResult()" class="text-stone-400 hover:text-white transition">&times; Clear</button>
+                        </div>
+                        <div id="ai-result-body" class="prose prose-invert max-w-none text-stone-300 leading-relaxed space-y-4 text-sm md:text-base">
+                            <!-- Gemini response will appear here -->
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-emerald-600 rounded-full opacity-10 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Founders Section -->
+    <section id="mission" class="py-20 bg-white border-y border-stone-100">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 serif text-stone-900 text-center md:text-left">Where Medicine Meets Technology</h2>
+                    <p class="text-lg text-stone-600 mb-6 leading-relaxed">
+                        At NutriThera AI LLC, we believe that a diagnosis is not a destiny. 
+                        Nutrition is the most powerful tool for slowing disease progression.
+                    </p>
+                    <div class="space-y-4" id="founders">
+                        <div class="p-6 bg-stone-50 rounded-xl border border-stone-100 hover:border-emerald-200 transition cursor-default group">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-emerald-100 p-3 rounded-lg text-emerald-700 text-2xl font-bold">&#9877;</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-stone-900">Hao-Ran Wang, Ph.D.</h3>
+                                    <p class="text-sm text-stone-500 font-medium mb-2">Nephrology Dept, UT Southwestern Medical Center</p>
+                                    <p class="text-stone-600 text-sm group-hover:text-stone-900 transition">Ensuring clinical accuracy in KiDDiAI based on UT Southwestern standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-stone-50 rounded-xl border border-stone-100 hover:border-blue-200 transition cursor-default group">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 p-3 rounded-lg text-blue-700 text-2xl font-bold">&#128187;</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-stone-900">Guohua Hao, Ph.D.</h3>
+                                    <p class="text-sm text-stone-500 font-medium mb-2">Ph.D. in Computer Science</p>
+                                    <p class="text-stone-600 text-sm group-hover:text-stone-900 transition">Architecting the AI engines that power the KiDDiAI Intelligence Suite.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-stone-900 text-white p-10 rounded-2xl shadow-2xl relative overflow-hidden text-center md:text-left">
+                    <div class="h-20 w-20 mb-6 mx-auto md:mx-0 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                        <img src="KiDDiAI.webp" alt="KiDDiAI Logo" class="h-full w-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-emerald-600 text-2xl font-bold\'>KAI</div>'">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-emerald-400">Our Core Belief</h3>
+                    <blockquote class="text-xl italic font-light mb-6 opacity-90 leading-relaxed">
+                        "Careful dietary control achieves a better prognosis and avoids the dialysis room."
+                    </blockquote>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 text-sm font-semibold tracking-widest uppercase text-stone-400">
+                        <span>Empowering Patients</span>
+                        <span class="text-emerald-500">&bull;</span>
+                        <span>Preserving Function</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section id="science" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4 serif text-stone-900">The Science of Preservation</h2>
+                <div class="chart-container">
+                    <canvas id="gfrChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-16 bg-white border-t border-stone-200">
+        <div class="container mx-auto px-6 text-center">
+            <div class="h-12 w-12 rounded-full border border-stone-100 mx-auto mb-6 bg-white overflow-hidden flex items-center justify-center">
+                <img src="KiDDiAI.webp" alt="KiDDiAI Logo" class="h-full w-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-emerald-600 text-xs font-bold\'>KAI</span>'">
+            </div>
+            <h2 class="text-xl font-bold text-stone-900 mb-2 font-serif">NutriThera AI LLC</h2>
+            <p class="text-emerald-700 font-medium italic mb-8">Empowering Patients. Preserving Function.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-xs text-stone-500 uppercase tracking-widest font-bold">
+                <a href="mailto:contact@nutri-thera.com" class="hover:text-emerald-600 transition flex items-center gap-2">
+                    <span class="text-lg">&#9993;</span> contact@nutri-thera.com
+                </a>
+                <a href="https://nutri-thera.com" class="hover:text-emerald-600 transition flex items-center gap-2">
+                    <span class="text-lg">&#127760;</span> nutri-thera.com
+                </a>
+            </div>
+            
+            <div class="mt-12 text-[10px] text-stone-400 max-w-xl mx-auto leading-relaxed">
+                &copy; 2026 NutriThera AI LLC. All rights reserved. <br>
+                KiDDiAI is an AI-powered dietary aid. AI features powered by Gemini API.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const apiKey = "";
+        const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
+
+        async function callGemini(prompt, systemInstruction) {
+            let retries = 0;
+            const maxRetries = 5;
+            while (retries <= maxRetries) {
+                try {
+                    const response = await fetch(`${API_URL}?key=${apiKey}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: prompt }] }],
+                            systemInstruction: { parts: [{ text: systemInstruction }] }
+                        })
+                    });
+                    if (!response.ok) throw new Error('API request failed');
+                    const result = await response.json();
+                    return result.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
+                } catch (error) {
+                    if (retries === maxRetries) return "Connection error. Please try again later.";
+                    const delay = Math.pow(2, retries) * 1000;
+                    await new Promise(res => setTimeout(res, delay));
+                    retries++;
+                }
+            }
+        }
+
+        function showLoading(title) {
+            const container = document.getElementById('ai-result-container');
+            const body = document.getElementById('ai-result-body');
+            const titleEl = document.getElementById('ai-result-title');
+            container.classList.remove('hidden');
+            titleEl.innerText = title;
+            body.innerHTML = `<div class="space-y-4"><div class="h-4 w-3/4 shimmer rounded"></div><div class="h-4 w-full shimmer rounded"></div></div><p class="text-xs text-stone-500 mt-4 italic">Gemini AI is analyzing...</p>`;
+            scrollToSection('ai-result-container');
+        }
+
+        async function analyzeMeal() {
+            const input = document.getElementById('meal-input').value;
+            if (!input) return;
+            showLoading("Meal Analysis ✨");
+            const response = await callGemini(input, "Analyze this meal for a Stage 3-5 CKD patient. Focus on renal nutrients (Na, K, P, Protein).");
+            document.getElementById('ai-result-body').innerText = response;
+        }
+
+        async function translateLab() {
+            const input = document.getElementById('lab-input').value;
+            if (!input) return;
+            showLoading("Lab Results ✨");
+            const response = await callGemini(input, "Translate these CKD lab results into plain language.");
+            document.getElementById('ai-result-body').innerText = response;
+        }
+
+        async function generateRecipe() {
+            const input = document.getElementById('recipe-input').value;
+            if (!input) return;
+            showLoading("Renal Recipe ✨");
+            const response = await callGemini(input, "Generate a kidney-friendly recipe using these ingredients.");
+            document.getElementById('ai-result-body').innerText = response;
+        }
+
+        function closeAiResult() { document.getElementById('ai-result-container').classList.add('hidden'); }
+        function scrollToSection(id) { const element = document.getElementById(id); if (element) element.scrollIntoView({ behavior: 'smooth' }); }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('gfrChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Start', 'Yr 1', 'Yr 2', 'Yr 3', 'Yr 4', 'Yr 5'],
+                    datasets: [
+                        { label: 'With KiDDiAI', data: [60, 59, 58, 57, 56, 55], borderColor: '#059669', tension: 0.3 },
+                        { label: 'Standard Care', data: [60, 54, 46, 38, 30, 22], borderColor: '#a8a29e', borderDash: [5, 5], tension: 0.3 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+        });
+    </script>
+</body>
+</html>
