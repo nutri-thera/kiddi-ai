@@ -1,0 +1,128 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .serif {
+    font-family: 'Merriweather', serif;
+}
+
+/* GFR Chart */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    max-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+    }
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-glow {
+    filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.2));
+}
+
+/* Markdown content styling (blog posts, pages) */
+.content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1c1917;
+}
+
+.content h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: #1c1917;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: #44403c;
+}
+
+.content ul, .content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    color: #44403c;
+}
+
+.content ul { list-style-type: disc; }
+.content ol { list-style-type: decimal; }
+
+.content li {
+    margin-bottom: 0.4rem;
+    line-height: 1.7;
+}
+
+.content a {
+    color: #059669;
+    text-decoration: underline;
+}
+
+.content a:hover {
+    color: #047857;
+}
+
+.content strong {
+    font-weight: 700;
+    color: #1c1917;
+}
+
+.content blockquote {
+    border-left: 4px solid #d6d3d1;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #78716c;
+    font-style: italic;
+}
+
+.content hr {
+    border: none;
+    border-top: 1px solid #e7e5e4;
+    margin: 2rem 0;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.content th {
+    background: #f5f5f4;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #e7e5e4;
+}
+
+.content td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #e7e5e4;
+}

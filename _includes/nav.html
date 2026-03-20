@@ -1,0 +1,19 @@
+<nav class="sticky top-0 z-50 bg-stone-50/95 backdrop-blur border-b border-stone-200">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-3">
+            <div class="h-10 w-10 overflow-hidden rounded-full border border-stone-100 flex items-center justify-center bg-white">
+                <img src="/KiDDiAI.webp" alt="KiDDiAI Logo" class="h-full w-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-emerald-600 text-xs font-bold\'>KAI</span>'">
+            </div>
+            <span class="text-2xl font-bold text-emerald-700 tracking-tight serif">KiDDiAI</span>
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-stone-600">
+            <a href="/#mission" class="hover:text-emerald-700 transition">Mission</a>
+            <a href="/how-it-works/" class="hover:text-emerald-700 transition {% if page.url contains 'how-it-works' %}text-emerald-700{% endif %}">How It Works</a>
+            <a href="/for-clinicians/" class="hover:text-emerald-700 transition {% if page.url contains 'for-clinicians' %}text-emerald-700{% endif %}">For Clinicians</a>
+            <a href="/blog/" class="hover:text-emerald-700 transition {% if page.url contains 'blog' %}text-emerald-700{% endif %}">Blog</a>
+        </div>
+        <a href="/contact/" class="bg-stone-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-emerald-700 transition shadow-lg">
+            Get the App
+        </a>
+    </div>
+</nav>
