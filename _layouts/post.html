@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="mb-12">
+        <div class="text-sm text-emerald-600 font-semibold uppercase tracking-wider mb-3">
+            {{ page.date | date: "%B %-d, %Y" }}
+            {% if page.author %}&nbsp;&bull;&nbsp;{{ page.author }}{% endif %}
+        </div>
+        <h1 class="text-3xl md:text-5xl font-bold text-stone-900 mb-6 serif leading-tight">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="text-xl text-stone-500 leading-relaxed">{{ page.description }}</p>
+        {% endif %}
+        <div class="mt-8 border-b border-stone-200"></div>
+    </header>
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    <footer class="mt-16 pt-8 border-t border-stone-200">
+        <p class="text-sm text-stone-400 italic leading-relaxed">
+            This content is for informational purposes only and does not constitute medical advice.
+            Always consult your nephrologist or renal dietitian before making changes to your diet.
+        </p>
+        <div class="mt-6">
+            <a href="/blog/" class="text-sm font-semibold text-emerald-600 hover:text-emerald-800 transition">&larr; Back to Blog</a>
+        </div>
+    </footer>
+</article>

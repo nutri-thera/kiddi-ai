@@ -1,0 +1,43 @@
+title: KiDDiAI
+description: Advanced AI-driven dietary management for Chronic Kidney Disease. Created by specialists at NutriThera AI LLC.
+url: "https://www.nutri-thera.com"
+baseurl: ""
+email: contact@nutri-thera.com
+author: NutriThera AI LLC
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins (all whitelisted by GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# URL structure for blog posts
+permalink: /blog/:title/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Files to exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .gitignore
+  - README.md
+  - CLAUDE.md
+  - "*.sh"
