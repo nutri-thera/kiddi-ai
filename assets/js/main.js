@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 labels: ['Start', 'Yr 1', 'Yr 2', 'Yr 3', 'Yr 4', 'Yr 5'],
                 datasets: [
                     {
-                        label: 'With KiDDiAI',
+                        label: 'With consistent dietary management',
                         data: [60, 59, 58, 57, 56, 55],
                         borderColor: '#059669',
                         backgroundColor: 'rgba(5, 150, 105, 0.05)',
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         pointBackgroundColor: '#059669'
                     },
                     {
-                        label: 'Standard Care',
+                        label: 'Without dietary management',
                         data: [60, 54, 46, 38, 30, 22],
                         borderColor: '#a8a29e',
                         borderDash: [5, 5],
