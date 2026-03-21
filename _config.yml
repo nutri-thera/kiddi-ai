@@ -4,6 +4,14 @@ url: "https://www.nutri-thera.com"
 baseurl: ""
 email: contact@nutri-thera.com
 author: NutriThera AI LLC
+locale: en_US
+
+# Twitter card
+twitter:
+  card: summary
+
+# TODO: add OG image once final design is ready
+# image: /assets/images/og-image.png
 
 # Build settings
 markdown: kramdown

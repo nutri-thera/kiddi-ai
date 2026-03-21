@@ -22,7 +22,7 @@ permalink: /blog/
             {% if post.description %}
             <p class="text-stone-500 leading-relaxed mb-3">{{ post.description }}</p>
             {% endif %}
-            <a href="{{ post.url }}" class="text-sm font-semibold text-emerald-600 hover:text-emerald-800 transition">Read more &rarr;</a>
+            <a href="{{ post.url }}" class="text-sm font-semibold text-emerald-600 hover:text-emerald-800 transition" aria-label="Read more: {{ post.title }}">Read more &rarr;</a>
             <div class="mt-8 border-b border-stone-100"></div>
         </article>
         {% endfor %}
