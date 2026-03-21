@@ -29,13 +29,13 @@ KiDDiAI's nutrient targets and the Renal Balance Score are informed by:
 
 We welcome feedback from patients, caregivers, and clinicians. [Contact us](/contact/) or email <contact@nutri-thera.com>.
 
-<div class="mt-8 flex gap-4 flex-wrap">
+<div class="mt-8 flex gap-4 flex-wrap not-content">
   <a href="https://apps.apple.com/app/kiddiai/id6755172184" target="_blank"
-    class="inline-flex items-center gap-2 px-5 py-3 bg-stone-900 text-white rounded-lg font-semibold hover:bg-stone-800 transition text-sm">
-    &#63743; App Store
+    class="px-6 py-3 bg-stone-900 text-white rounded-lg font-semibold shadow-xl hover:bg-stone-800 transition transform hover:-translate-y-1 flex items-center gap-2">
+    <span class="text-xl">&#63743;</span> App Store
   </a>
   <a href="https://play.google.com/store/apps/details?id=com.nutri_thera.KiddiAI" target="_blank"
-    class="inline-flex items-center gap-2 px-5 py-3 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 transition text-sm">
-    &#9654; Google Play
+    class="px-6 py-3 bg-emerald-700 text-white rounded-lg font-semibold shadow-xl hover:bg-emerald-800 transition transform hover:-translate-y-1 flex items-center gap-2">
+    <span class="text-lg">&#9654;</span> Google Play
   </a>
 </div>

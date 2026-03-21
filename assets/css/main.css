@@ -88,6 +88,12 @@ h1, h2, h3, .serif {
     color: #047857;
 }
 
+.content .not-content a,
+.content .not-content a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .content strong {
     font-weight: 700;
     color: #1c1917;
