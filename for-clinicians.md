@@ -53,7 +53,7 @@ Patients can set custom nutrient limits (prescribed by their care team), or fall
 
 We welcome feedback from the clinical community. If you're interested in piloting KiDDiAI with your patient population or have clinical questions, please [get in touch](/contact/).
 
-<div class="mt-10 flex gap-4 flex-wrap">
+<div class="not-content mt-10 flex gap-4 flex-wrap">
   <a href="https://apps.apple.com/app/kiddiai/id6755172184" target="_blank"
     class="inline-flex items-center gap-2 px-5 py-3 bg-stone-900 text-white rounded-lg font-semibold hover:bg-stone-800 transition text-sm">
     &#63743; App Store
