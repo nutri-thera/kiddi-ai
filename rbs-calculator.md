@@ -177,11 +177,11 @@ firebase: true
       <p class="font-semibold text-emerald-900 text-lg mb-1">Get your personalised RBS every day</p>
       <p class="text-sm text-emerald-700 mb-5">The app logs your meals automatically, uses your doctor's exact limits, and tracks your score over time.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-3">
-        <a href="https://apps.apple.com/app/kiddiai/id6741445846"
+        <a href="https://apps.apple.com/app/kiddiai/id6755172184" target="_blank"
           class="inline-block bg-stone-900 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-emerald-700 transition shadow">
           Download on the App Store
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.nutrithera.mykidneypal"
+        <a href="https://play.google.com/store/apps/details?id=com.nutri_thera.KiddiAI" target="_blank"
           class="inline-block bg-stone-900 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-emerald-700 transition shadow">
           Get it on Google Play
         </a>

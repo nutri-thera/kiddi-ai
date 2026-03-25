@@ -58,7 +58,7 @@ If your nephrologist or dietitian has prescribed specific nutrient limits, you c
 
 *Ready to get started?*
 
-<div class="mt-10 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center">
+<div class="not-content mt-10 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center">
   <p class="font-semibold text-emerald-900 text-lg mb-1">See the RBS in action</p>
   <p class="text-sm text-emerald-700 mb-4">Enter today's nutrient intake and calculate your score — no account needed.</p>
   <a href="/rbs-calculator/"
