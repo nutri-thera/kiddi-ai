@@ -45,6 +45,8 @@ This matters because, for example, a Stage 3 patient and a dialysis patient have
 
 ## How to Use It
 
+You can [try the RBS Calculator](/rbs-calculator/) with your own nutrient values right now — no account needed. In the app, the score updates automatically as you log meals.
+
 1. **Log your food** — Search the food database, scan barcodes, or photograph meals
 2. **Check your RBS** — Your daily score updates in real time on the dashboard
 3. **Review each pillar** — See exactly which nutrients are in or out of range

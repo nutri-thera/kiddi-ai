@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "RBS Calculator — Try the Renal Balance Score"
-description: "Enter your daily nutrient intake and CKD profile to calculate your Renal Balance Score — the same engine used in the KiDDiAI app."
+title: "CKD Nutrition Calculator — Renal Balance Score"
+description: "Free CKD nutrition calculator. Enter your daily protein, sodium, potassium, phosphorus and fluid intake to get your Renal Balance Score — personalized to your CKD stage."
 permalink: /rbs-calculator/
 firebase: true
 ---
@@ -11,6 +11,10 @@ firebase: true
   <header class="mb-10">
     <h1 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4 serif leading-tight">Try the Renal Balance Score</h1>
     <p class="text-lg text-stone-500 leading-relaxed">Enter today's nutrient intake to see your personalised RBS — the same calculation the app runs every day.</p>
+    <div class="mt-4 prose text-stone-600 leading-relaxed space-y-2 text-sm">
+      <p>Managing a CKD diet means tracking five key nutrients — protein, sodium, potassium, phosphorus, and fluid — each with different limits depending on your CKD stage, dialysis status, and other conditions. This free calculator uses the same evidence-based guidelines (KDOQI) as the KiDDiAI app to score your daily intake across all five pillars and combine them into a single 0–100 score.</p>
+      <p>Select your profile below, enter what you've eaten today, and see exactly where you stand — and what to adjust.</p>
+    </div>
     <div class="mt-6 border-b border-stone-200"></div>
   </header>
 
@@ -186,6 +190,12 @@ firebase: true
           Get it on Google Play
         </a>
       </div>
+    </div>
+
+    <!-- About the score -->
+    <div class="mt-8 bg-stone-50 border border-stone-200 rounded-xl p-5 text-sm text-stone-600 leading-relaxed space-y-2">
+      <p><strong class="text-stone-800">How the score is calculated:</strong> Each of the five nutritional pillars is scored independently against stage-specific KDOQI guidelines, then combined with weights tailored to your profile. A dialysis patient's protein and fluid pillars carry more weight; an early-stage patient's potassium and phosphorus are not yet restricted. The result is a single 0–100 number that reflects your full dietary picture for the day.</p>
+      <p>For a full explanation of the scoring system, see <a href="/how-it-works/" class="text-emerald-700 underline hover:text-emerald-900">How It Works</a>.</p>
     </div>
 
     <!-- Disclaimer -->
