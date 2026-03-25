@@ -6,6 +6,11 @@
     {% seo %}
     <script src="https://cdn.tailwindcss.com"></script>
     {% if page.chart %}<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>{% endif %}
+    {% if page.firebase %}
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-functions-compat.js"></script>
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body class="bg-stone-50 text-stone-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
@@ -19,5 +24,8 @@
     {% include footer.html %}
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    {% if page.firebase %}
+    <script src="{{ '/assets/js/rbs-widget.js' | relative_url }}"></script>
+    {% endif %}
 </body>
 </html>

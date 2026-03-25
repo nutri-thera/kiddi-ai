@@ -58,6 +58,15 @@ If your nephrologist or dietitian has prescribed specific nutrient limits, you c
 
 *Ready to get started?*
 
+<div class="mt-10 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center">
+  <p class="font-semibold text-emerald-900 text-lg mb-1">See the RBS in action</p>
+  <p class="text-sm text-emerald-700 mb-4">Enter today's nutrient intake and calculate your score — no account needed.</p>
+  <a href="/rbs-calculator/"
+    class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-full shadow transition">
+    Try the RBS Calculator →
+  </a>
+</div>
+
 <div class="not-content mt-6 flex gap-4 flex-wrap">
   <a href="https://apps.apple.com/app/kiddiai/id6755172184" target="_blank"
     class="inline-flex items-center gap-2 px-5 py-3 bg-stone-900 text-white rounded-lg font-semibold hover:bg-stone-800 transition text-sm">
