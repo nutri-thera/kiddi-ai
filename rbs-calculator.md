@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "CKD Nutrition Calculator — Renal Balance Score"
-description: "Free CKD nutrition calculator. Enter your daily protein, sodium, potassium, phosphorus and fluid intake to get your Renal Balance Score — personalized to your CKD stage."
+description: "Free CKD nutrition calculator. Enter your daily protein, sodium, potassium, phosphorus and fluid to get your personalized Renal Balance Score."
 permalink: /rbs-calculator/
 firebase: true
 ---
@@ -9,7 +9,7 @@ firebase: true
 <div id="rbs-widget" class="max-w-3xl mx-auto px-6 py-16">
 
   <header class="mb-10">
-    <h1 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4 serif leading-tight">Try the Renal Balance Score</h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4 serif leading-tight">CKD Nutrition Calculator — Check Your Renal Balance Score</h1>
     <p class="text-lg text-stone-500 leading-relaxed">Enter today's nutrient intake to see your personalised RBS — the same calculation the app runs every day.</p>
     <div class="mt-4 prose text-stone-600 leading-relaxed space-y-2 text-sm">
       <p>Managing a CKD diet means tracking five key nutrients — protein, sodium, potassium, phosphorus, and fluid — each with different limits depending on your CKD stage, dialysis status, and other conditions. This free calculator uses the same evidence-based guidelines (KDOQI) as the KiDDiAI app to score your daily intake across all five pillars and combine them into a single 0–100 score.</p>
@@ -20,7 +20,7 @@ firebase: true
 
   <!-- Step 1: Profile -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-stone-800 mb-1">Step 1 — Your Profile</h2>
+    <h2 class="text-xl font-bold text-stone-800 mb-1">Step 1 — Your CKD Profile</h2>
     <p class="text-sm text-stone-500 mb-5">Used to select your scoring profile and nutrient targets.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -73,7 +73,7 @@ firebase: true
 
   <!-- Step 2: Nutrient Intake -->
   <section class="mb-10">
-    <h2 class="text-xl font-bold text-stone-800 mb-1">Step 2 — Today's Intake</h2>
+    <h2 class="text-xl font-bold text-stone-800 mb-1">Step 2 — Today's Nutrient Intake</h2>
     <p class="text-sm text-stone-500 mb-5">Enter what you've eaten and drunk today. Targets update based on your profile above.</p>
 
     <div class="space-y-5">
@@ -192,12 +192,6 @@ firebase: true
       </div>
     </div>
 
-    <!-- About the score -->
-    <div class="mt-8 bg-stone-50 border border-stone-200 rounded-xl p-5 text-sm text-stone-600 leading-relaxed space-y-2">
-      <p><strong class="text-stone-800">How the score is calculated:</strong> Each of the five nutritional pillars is scored independently against stage-specific KDOQI guidelines, then combined with weights tailored to your profile. A dialysis patient's protein and fluid pillars carry more weight; an early-stage patient's potassium and phosphorus are not yet restricted. The result is a single 0–100 number that reflects your full dietary picture for the day.</p>
-      <p>For a full explanation of the scoring system, see <a href="/how-it-works/" class="text-emerald-700 underline hover:text-emerald-900">How It Works</a>.</p>
-    </div>
-
     <!-- Disclaimer -->
     <p class="mt-6 text-xs text-stone-400 leading-relaxed text-center">
       This calculator uses standard KDOQI guidelines for demonstration. It does not replace medical advice.
@@ -205,4 +199,11 @@ firebase: true
     </p>
 
   </section>
+
+  <!-- About the score — always visible for SEO -->
+  <div class="mt-10 border-t border-stone-200 pt-8 bg-stone-50 rounded-xl p-5 text-sm text-stone-600 leading-relaxed space-y-2">
+    <p><strong class="text-stone-800">How the Renal Balance Score is calculated:</strong> Each of the five nutritional pillars — protein, sodium, potassium, phosphorus, and fluid — is scored independently against stage-specific KDOQI guidelines, then combined with weights tailored to your CKD profile. A dialysis patient's protein and fluid pillars carry more weight; an early-stage patient's potassium and phosphorus are not yet restricted. The result is a single 0–100 number that reflects your full dietary picture for the day.</p>
+    <p>For a full explanation of the scoring system, see <a href="/how-it-works/" class="text-emerald-700 underline hover:text-emerald-900">How the Renal Balance Score works</a>.</p>
+  </div>
+
 </div>
