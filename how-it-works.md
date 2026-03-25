@@ -5,6 +5,47 @@ description: "KiDDiAI's Renal Balance Score is a 0–100 composite score across 
 permalink: /how-it-works/
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Renal Balance Score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Renal Balance Score (RBS) is a 0–100 daily score that measures how well your food intake aligns with your kidney health goals. It is computed across five nutritional pillars: protein, sodium, potassium, phosphorus, and fluid — each scored independently and combined with weights tailored to your CKD profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the four CKD scoring profiles different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KiDDiAI selects one of four scoring profiles based on your CKD stage and treatment status: Standard CKD (Stage 3–5, not on dialysis), Dialysis (hemodialysis or peritoneal), Fluid-Restricted (CHF or edema), and Early Stage (Stage 1–3a, where potassium and phosphorus are weighted lower). Each profile applies different pillar weights because nutrient priorities differ significantly — for example, dialysis patients need higher protein intake while standard CKD patients need to restrict it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does my Renal Balance Score mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scores of 80–100 are Optimal (excellent dietary alignment), 60–79 are Stable (good, with minor areas to improve), 40–59 are Caution (notable imbalances to address), and 0–39 are Critical (significant dietary concerns requiring immediate attention)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my doctor's prescribed nutrient limits instead of the defaults?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your nephrologist or renal dietitian has prescribed specific nutrient limits, you can enter them directly in your profile in the KiDDiAI app. The app will use those exact limits instead of the stage-based KDOQI defaults when calculating your Renal Balance Score."
+      }
+    }
+  ]
+}
+</script>
+
 Managing a CKD diet is complicated. You're tracking protein, sodium, potassium, phosphorus, and fluid — all with different limits depending on your CKD stage, whether you're on dialysis, and whether you have other conditions like CHF.
 
 KiDDiAI simplifies this into a single daily score: the **Renal Balance Score (RBS)**.
