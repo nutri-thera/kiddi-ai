@@ -13,6 +13,15 @@
   };
 
   const app = firebase.initializeApp(firebaseConfig);
+
+  // App Check — validates requests originate from your real site
+  // reCAPTCHA v3 site key (public — secret key lives in Firebase Console)
+  const appCheck = firebase.appCheck(app);
+  appCheck.activate(
+    new firebase.appCheck.ReCaptchaV3Provider('6Lfa7posAAAAADjKSIdlcLu9A9XVXvBWaqy1XweV'),
+    /* isTokenAutoRefreshEnabled= */ true
+  );
+
   const auth = firebase.auth(app);
   const functions = firebase.functions(app);
   const calculateRBSDemo = functions.httpsCallable('calculateRBSDemo');
